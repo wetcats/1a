@@ -6,7 +6,7 @@ sudo chmod +r *.*
 export CLASSPATH="$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.3.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.3.jar:$HADOOP_HOME/share/hadoop/common/hadoop-common-3.2.3.jar:~/Test/SalesCountry/*:$HADOOP_HOME/lib/*"
 javac -d . SalesMapper.java SalesCountryReducer.java SalesCountryDriver.java
 sudo gedit Manifest.txt
-
+main-Class: SalesCountry.SalesCountryDriver
 jar cfm Test1.jar Manifest.txt SalesCountry/*.class
 ls
 start-all.sh
